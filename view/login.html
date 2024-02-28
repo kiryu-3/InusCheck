@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>情報活用力チェック</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet"  type="text/css" href="result/css/hamburger.css">
+    <script>
+        // JavaScriptでフォームのaction属性を設定
+        document.getElementById("loginForm").addEventListener("submit", function() {
+            // ここでnextの値を取得し、動的にaction属性を設定
+            var nextValue = "動的に取得した値";  // 例: ページ内で取得したり、サーバーから取得したり
+            this.action = "/login?next=" + encodeURIComponent(nextValue);
+        });
+
+        function redirectToRegister() {
+            var nextParam = getQueryStringParameter('next');
+            var redirectUrl = '/register';
+            if (nextParam) {
+                redirectUrl += '?next=' + encodeURIComponent(nextParam);
+            }
+            window.location.href = redirectUrl;
+        }
+
+        function getQueryStringParameter(name) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h2 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label {
+            color: #007bff;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+
+        p {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="c-header c-hamburger-menu">
+        <a href="{{ url_for('top') }}" class="c-header__logo">情報活用力チェック</a>
+        <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/>
+        <label for="hamburger" class="c-hamburger-menu__bg"></label>
+        <ul class="c-header__list c-hamburger-menu__list">
+            <li class="c-header__list-item">
+                <a href="{{ url_for('top') }}" class="c-header__list-link">TOP</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="{{ url_for('dashboard') }}" class="c-header__list-link">チェックスタート</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="{{ url_for('selectUniversity') }}" class="c-header__list-link">チェック履歴</a>
+            </li>
+        </ul>
+        <label for="hamburger" class="c-hamburger-menu__button">
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+        </label>
+    </header>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <h2 class="text-center">ログイン</h2>
+                <form id="loginForm" method="post">
+                    <div class="form-group">
+                        <label for="email">メールアドレス:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">パスワード:</label>
+                        <input type="password" class="form-control" id="pwd" name="pwd" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">ログイン</button>
+                </form>
+                <button onclick="redirectToRegister()" class="btn btn-link btn-block">新規登録</button>
+                <p>メールアドレスは、個人を特定するための識別情報として使用します。<br>
+                    他の利用者とメールアドレスが被ると正確な識別が難しくなりますので、<br>
+                    大学のメールアドレスを入力していただくようご協力お願い申し上げます。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

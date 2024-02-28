@@ -1,0 +1,81 @@
+{
+    "email": "yukiya36@yahoo.co.jp",
+    "university": "公立千歳科学技術大学",
+    "grade": "B4",
+    "department": "情報システム工学科",
+    "cnumber": 3,
+    "category": "情報システム開発力",
+    "nextpage": "/question2",
+    "question": [
+        {
+            "sentence": "情報システムの開発工程において，「要求定義→設計→実装→テスト」の一連のプロセスを実践または体験したことがある．",
+            "qnumber": 31,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "1種類以上のプログラミング言語で，簡易な順次構造・反復構造・分岐構造のコードを記述できる．",
+            "qnumber": 32,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "1種類以上のプログラミング言語で，線形探索または二分探索のコードを記述できる．",
+            "qnumber": 33,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "1種類以上のプログラミング言語で，単純交換ソート，単純挿入ソート，単純選択ソートのいずれかのコードを記述できる．",
+            "qnumber": 34,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "オブジェクト指向プログラミングの考え方および基本的な用語（カプセル化，クラス，インスタンスなど）を説明できる．",
+            "qnumber": 35,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "Microsoft Windows MLやApple CoreMLなどの，機械学習における学習済みの学習器を利用して，アプリケーションを作成したことがある．",
+            "qnumber": 36,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "ニューラルネットワークを構築したことがある．または，学習のためのデータセットを作成したことがある．",
+            "qnumber": 37,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "自分のパソコンなどをインターネットへつなぐために，ルータのWAN側とLAN側の設定をおこなったことがある．",
+            "qnumber": 38,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "ルータのファイアウォールの設定をおこなったことがある．",
+            "qnumber": 39,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "サーバのネットワークの設定をおこなったことがある．",
+            "qnumber": 40,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "サーバのファイアウォールの設定をおこなったことがある．",
+            "qnumber": 41,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "サーバのhttpサービスの設定をおこなったことがある．",
+            "qnumber": 42,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "ユーザビリティにおける効果・効率・満足度について説明できる．",
+            "qnumber": 43,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "情報デザインとして，場所・辞書順・時間・カテゴリ・階層などに注意した情報の整理を心がけている．",
+            "qnumber": 44,
+            "radio_check": "None"
+        }
+    ]
+}

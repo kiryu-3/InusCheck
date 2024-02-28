@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>情報活用力チェック</title>
+    <link href="result/css/select2.min.css"  type="text/css" rel="stylesheet" />
+    <!-- <link href="result/css/submit.css" rel="stylesheet" /> -->
+    <link rel="stylesheet"  type="text/css" href="result/css/submit.css">
+    <script  type="text/javascript" src="result/js/userJs/jquery-3.7.1.js"></script>
+    <script>
+        var nowData = {{ now_data }};
+        var userData = {{ user_data }};
+        var allLatestData = {{ all_latest_data }};
+        var departmentPerData = {};
+        var datePerData = {};
+        var departmentLengthData = {};
+        var dateLengthData = {};
+
+    </script>
+    <script  type="text/javascript" src="result/js/Myjs/submit.js"></script>
+    <script  type="text/javascript" src="result/js/select2.min.js"></script>
+    <script  type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        </style>
+
+</head>
+<body>
+    <header class="c-header c-hamburger-menu">
+        <a href="#" class="c-header__logo">情報活用力チェック</a>
+        <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/>
+        <label for="hamburger" class="c-hamburger-menu__bg"></label>
+        <ul class="c-header__list c-hamburger-menu__list">
+            <li class="c-header__list-item">
+                <a href="#" class="c-header__list-link">TOP</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="#" class="c-header__list-link">分析結果履歴</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="#" class="c-header__list-link">問い合わせ</a>
+            </li>
+        </ul>
+        <label for="hamburger" class="c-hamburger-menu__button">
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+        </label>
+    </header>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="bordertitle">
+                    <p>メールアドレス: {{email}}</p>
+                    <p>大学名: {{university}}</p>
+                    <p>学年: {{grade}}</p>
+                    <p>学科: {{department}}</p>
+                </div>
+                <h1 class="text-center">チェック結果</h1>
+                <p style="font-weight: bold; color: red;">アンケートへのご協力をお願いします！※必須</p>
+
+                <div class="transition">
+                    <button class="btn2" onclick="location.href='questionnaire'">アンケートに答える</button>
+                </div>
+
+                <div class="conditions">
+                    <h2 class="text-center">条件指定</h2>
+                    <h3 class="text-center">学年</h3>
+                    <select class="multi-select" style="width:200px;" multiple="multiple" id="grades"><!--★★ここのclass名が・・・-->
+                        {% for item in grades %}
+                            <option value="{{item}}" {% if item == grade %}selected{% endif %}>{{item}}</option>
+                        {% endfor %}
+                    </select>
+
+                    <h3 class="text-center">所属学部・学科</h3>
+                    <select class="multi-select" style="width:200px;" multiple="multiple" id="departments"><!--★★ここのclass名が・・・-->
+                        {% for item in departments %}
+                            <option value="{{item}}" {% if item == department %}selected{% endif %}>{{item}}</option>
+                        {% endfor %}
+                    </select>
+
+                    <h3 class="text-center">日付</h3>
+                    <select class="multi-select" style="width:200px;" multiple="multiple" id="dates"><!--★★ここのclass名が・・・-->
+                        {% for item in dates %}
+                            <option value="{{item}}" {% if item == date %}selected{% endif %}>{{item}}</option>
+                        {% endfor %}
+                    </select>
+
+                    <br>
+                    <br>
+
+                    <div class="btn2">
+                        <button type="graph1" class="btn btn-primary center">反映</button>
+                        <button type="graph1" class="btn btn-primary2 center">リセット</button>
+                    </div>
+                </div>
+
+                <!-- ラダーチャートを描画するための要素 -->
+                <div id="radarChart_1"></div>
+                <div id="radarChart_2"></div>
+
+                <!-- <h2 class="text-center">条件指定</h2> -->
+
+
+                <h2>問題別回答</h2>
+                <label for="category">カテゴリを選択してください:</label>
+                <select id="category" name="category" onchange="showQuestions()">
+                    {% for category in categories %}
+                        <option value="{{ category }}">{{ category }}</option>
+                    {% endfor %}
+                </select>
+                <div class="questions">
+                    {% for item in answer %}
+                        <p class="question{{item.qnumber}}" style="{% if item.qnumber in range(1, 15) %}display: block;{% else %}display: none;{% endif %}">Q{{ item.qnumber }}：{{ item.sentence }}</p>
+                        {% for ans in item.data %}
+                            <p class="question{{item.qnumber}}" style="{% if item.qnumber in range(1, 15) %}display: block;{% else %}display: none;{% endif %}">
+                                {{ ans.date }}：{{ ans.check }}
+                                 <!-- <div class="border" style="{% if item.qnumber in range(1, 15) %}display: block;{% else %}display: none;{% endif %}"></div> -->
+                            </p>
+                            {% endfor %}
+                        <div class="question{{item.qnumber}}" id="barChart_{{item.qnumber}}"  style="{% if item.qnumber in range(1, 15) %}display: block;{% else %}display: none;{% endif %}"></div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

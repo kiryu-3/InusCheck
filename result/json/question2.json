@@ -1,0 +1,86 @@
+{
+    "email": "yukiya36@yahoo.co.jp",
+    "university": "公立千歳科学技術大学",
+    "grade": "B4",
+    "department": "情報システム工学科",
+    "cnumber": 2,
+    "category": "データ利活用力",
+    "nextpage": "/question1",
+    "question": [
+        {
+            "sentence": "機械判読可能なデータの表記を意識して統計表を作成できる．",
+            "qnumber": 16,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "グラフの特徴や統計データの種類や分析の目的を踏まえて，グラフを使い分けている．",
+            "qnumber": 17,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "名義尺度，順序尺度，感覚尺度，比例尺度の違いを説明できる．",
+            "qnumber": 18,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "ソフトウェアを使って，基本統計量を算出できる．",
+            "qnumber": 19,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "ソフトウェアを使って，単回帰式を導出できる．",
+            "qnumber": 20,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "ソフトウェアを使って，t検定を実施できる．",
+            "qnumber": 21,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "ソフトウェアを使って，一元配置分散分析を実施できる．",
+            "qnumber": 22,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "ソフトウェアを使って，ノンパラメトリック検定を実施できる．",
+            "qnumber": 23,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "ソフトウェアを使って，因子分析を実施できる．",
+            "qnumber": 24,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "ソフトウェアを使って，クラスター分析を実施できる．",
+            "qnumber": 25,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "プログラミングによって，基本統計量を算出できる．",
+            "qnumber": 26,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "プログラミングによって，散布図やヒストグラムや箱ひげ図などによるデータの視覚化をおこなえる．",
+            "qnumber": 27,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "プログラミングによって，単回帰式を導出できる．",
+            "qnumber": 28,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "プログラミングによって，t検定を実施できる．",
+            "qnumber": 29,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "プログラミングによって，一元配置分散分析を実施できる．",
+            "qnumber": 30,
+            "radio_check": "None"
+        }
+    ]
+}

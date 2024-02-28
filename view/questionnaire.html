@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情報活用力チェック</title>
+    <link rel="stylesheet"  type="text/css" href="result/css/hamburger.css">
+    <link rel="stylesheet"  type="text/css" href="result/css/questionnaire.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h2 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+
+        .form-group select {
+            width: 480px; /* 任意の幅に設定 */
+        }
+        </style>
+    <script>
+        function checkRadioSelected() {
+            var radioGroups = document.querySelectorAll('input[type="radio"][name^="question"]');
+            var submitButton = document.getElementById('submit');
+
+            // ラジオボタングループごとに選択があるかどうかを確認
+            var allGroupsSelected = Array.from(radioGroups).every(function(radioGroup) {
+                return Array.from(document.querySelectorAll('input[type="radio"][name="' + radioGroup.name + '"]')).some(function(radio) {
+                    return radio.checked;
+                });
+            });
+
+            // 選択があれば送信ボタンを有効にする
+            if (allGroupsSelected) {
+                submitButton.disabled = false;
+            } else {
+                submitButton.disabled = true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="c-header c-hamburger-menu">
+        <a href="{{ url_for('top') }}" class="c-header__logo">情報活用力チェック</a>
+        <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/>
+        <label for="hamburger" class="c-hamburger-menu__bg"></label>
+        <ul class="c-header__list c-hamburger-menu__list">
+            <li class="c-header__list-item">
+                <a href="{{ url_for('top') }}" class="c-header__list-link">TOP</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="{{ url_for('dashboard') }}" class="c-header__list-link">チェックスタート</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="{{ url_for('selectUniversity') }}" class="c-header__list-link">チェック履歴</a>
+            </li>
+        </ul>
+        <label for="hamburger" class="c-hamburger-menu__button">
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+        </label>
+    </header>
+    <div class="container">
+        <h1>アンケート</h1>
+        <div class="bordertitle"><h3>回答にかかった時間：{{time}}</h3></div>
+
+        <h2>1.あなたについて</h2>
+        <form action="/finish" method="post">
+            <div class="question">
+
+                <div class="question1">
+                    <label for="question1" class="sentence">（ア）あなたは情報通信技術に関する何かしらの資格（ITパスポート，基本情報技術者，応用情報技術者など）を有していますか？</label>
+                    <br>
+
+                    <input type="radio" name="question1" id="yes" value="はい" onchange="checkRadioSelected()">
+                    <label for="yes" class="label">はい</label>
+
+                    <input type="radio" name="question1" id="no" value="いいえ" onchange="checkRadioSelected()">
+                    <label for="no" class="label">いいえ</label>
+
+                    <br>
+                    <div class="borderquestion"></div>
+                </div>
+
+            </div>
+        <!-- </form> -->
+        <h2>2.この情報活用調査全般について</h2>
+        <!-- <form action="/finish" method="post"> -->
+            <div class="question">
+                <div class="question2">
+                    <label for="question2" class="sentence">(ア) 質問文の理解しやすさは，どの程度でしたか？</label>
+                    <br>
+
+                    <input type="radio" name="question2" id="question2-1" value="非常に理解しにくかった" onchange="checkRadioSelected()">
+                    <label for="question2-1" class="label">非常に理解しにくかった</label>
+
+                    <input type="radio" name="question2" id="question2-2" value="どちらかといえば理解しにくかった" onchange="checkRadioSelected()">
+                    <label for="question2-2" class="label">どちらかといえば理解しにくかった</label>
+
+                    <input type="radio" name="question2" id="question2-3" value="どちらかといえば理解しやすかった" onchange="checkRadioSelected()">
+                    <label for="question2-3" class="label">どちらかといえば理解しやすかった</label>
+
+                    <input type="radio" name="question2" id="question2-4" value="とても理解しやすかった" onchange="checkRadioSelected()">
+                    <label for="question2-4" class="label">とても理解しやすかった</label>
+
+                    <br>
+                    <div class="borderquestion"></div>
+                </div>
+
+                <div class="question3">
+                    <label for="question3" class="sentence">(イ) 回答のしやすさは，どの程度でしたか？</label>
+                    <br>
+
+                    <input type="radio" name="question3" id="question3-1" value="非常に回答しにくかった" onchange="checkRadioSelected()">
+                    <label for="question3-1" class="label">非常に回答しにくかった</label>
+
+                    <input type="radio" name="question3" id="question3-2" value="どちらかといえば理解しにくかった" onchange="checkRadioSelected()">
+                    <label for="question3-2" class="label">どちらかといえば理解しにくかった</label>
+
+                    <input type="radio" name="question3" id="question3-3" value="どちらかといえば理解しやすかった" onchange="checkRadioSelected()">
+                    <label for="question3-3" class="label">どちらかといえば理解しやすかった</label>
+
+                    <input type="radio" name="question3" id="question3-4" value="とても理解しやすかった" onchange="checkRadioSelected()">
+                    <label for="question3-4" class="label">とても理解しやすかった</label>
+
+                    <br>
+                    <div class="borderquestion"></div>
+                </div>
+
+                <!-- 同様に以下のように修正していきます -->
+
+                <div class="question4">
+                    <label for="question4" class="sentence">(ウ) 大学生としての，現時点でのあなたの情報活用に関する知識やスキルの状況を確認するのに，妥当でしたか？</label>
+                    <br>
+
+                    <input type="radio" name="question4" id="question4-1" value="非常に不当である" onchange="checkRadioSelected()">
+                    <label for="question4-1" class="label">非常に不当である</label>
+
+                    <input type="radio" name="question4" id="question4-2" value="どちらかといえば不当である" onchange="checkRadioSelected()">
+                    <label for="question4-2" class="label">どちらかといえば不当である</label>
+
+                    <input type="radio" name="question4" id="question4-3" value="どちらかといえば妥当である" onchange="checkRadioSelected()">
+                    <label for="question4-3" class="label">どちらかといえば妥当である</label>
+
+                    <input type="radio" name="question4" id="question4-4" value="かなり妥当である" onchange="checkRadioSelected()">
+                    <label for="question4-4" class="label">かなり妥当である</label>
+
+                    <br>
+                    <div class="borderquestion"></div>
+                </div>
+
+                <!-- 同様に以下のように修正していきます -->
+
+                <div class="question5">
+                    <label for="question5" class="sentence">(エ) 大学生としての，卒業時点でのあなたの情報活用に関する知識やスキルの状況を確認するのに，妥当ですか？</label>
+                    <br>
+
+                    <input type="radio" name="question5" id="question5-1" value="非常に不当である" onchange="checkRadioSelected()">
+                    <label for="question5-1" class="label">非常に不当である</label>
+
+                    <input type="radio" name="question5" id="question5-2" value="どちらかといえば不当である" onchange="checkRadioSelected()">
+                    <label for="question5-2" class="label">どちらかといえば不当である</label>
+
+                    <input type="radio" name="question5" id="question5-3" value="どちらかといえば妥当である" onchange="checkRadioSelected()">
+                    <label for="question5-3" class="label">どちらかといえば妥当である</label>
+
+                    <input type="radio" name="question5" id="question5-4" value="かなり妥当である" onchange="checkRadioSelected()">
+                    <label for="question5-4" class="label">かなり妥当である</label>
+
+                    <br>
+                    <div class="borderquestion"></div>
+                </div>
+
+                <div class="question6">
+                    <label for="question6" class="sentence">(オ) 1年後に同様の調査へ回答した場合，あなたの結果は，現時点よりも向上していると思いますか？</label>
+                    <br>
+
+                    <input type="radio" name="question6" id="question6-1" value="まったくそう思わない" onchange="checkRadioSelected()">
+                    <label for="question6-1" class="label">まったくそう思わない</label>
+
+                    <input type="radio" name="question6" id="question6-2" value="あまりそう思わない" onchange="checkRadioSelected()">
+                    <label for="question6-2" class="label">あまりそう思わない</label>
+
+                    <input type="radio" name="question6" id="question6-3" value="どちらともいえない" onchange="checkRadioSelected()">
+                    <label for="question6-3" class="label">どちらともいえない</label>
+
+                    <input type="radio" name="question6" id="question6-4" value="ややそう思う" onchange="checkRadioSelected()">
+                    <label for="question6-4" class="label">ややそう思う</label>
+
+                    <input type="radio" name="question6" id="question6-5" value="とてもそう思う" onchange="checkRadioSelected()">
+                    <label for="question6-5" class="label">とてもそう思う</label>
+
+                    <br>
+                    <div class="borderquestion"></div>
+                </div>
+            <h2>3.自由記述欄</h2>
+                <div class="question7">
+                    <label for="question7" class="sentence">(カ) その他、自由にご意見やコメントをお聞かせください（500文字以内）</label>
+                    <br>
+                    <textarea id="question7" name="question7" maxlength="500">特になし</textarea>
+                    <br>
+                    <div class="borderquestion"></div>
+                </div>
+            </div>
+
+            <div class="transition">
+                <input type="submit" id="submit" value="送信" disabled> <!--ここの遷移頼む-->
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>

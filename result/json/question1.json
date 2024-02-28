@@ -1,0 +1,86 @@
+{
+    "email": "yukiya36@yahoo.co.jp",
+    "university": "公立千歳科学技術大学",
+    "grade": "B4",
+    "department": "情報システム工学科",
+    "cnumber": 1,
+    "category": "オンライン・コラボレーション力",
+    "nextpage": "/dashboard",
+    "question": [
+        {
+            "sentence": "ビデオ会議や共有ホワイトボードなどによって，複数人でオンラインでのディスカッションをおこなえる．",
+            "qnumber": 1,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "クラウドサービスなどによって，複数人でオンラインでの共同文書作成をおこなえる．",
+            "qnumber": 2,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "クラウドサービスなどによって，複数人でオンラインでの共同表計算データ処理をおこなえる．",
+            "qnumber": 3,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "クラウドサービスなどによって，複数人でオンラインでのプレゼンテーション資料（スライド）の作成をおこなえる．",
+            "qnumber": 4,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "メタバースにおいて，複数人での共同作業をおこなえる．",
+            "qnumber": 5,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "自身の作業工程や活動状況をクラウドサービスなどによって，電子的に管理できる．",
+            "qnumber": 6,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "クラウドサービスなどによって，自身と他者の作業工程や活動状況を電子的に情報共有できる．",
+            "qnumber": 7,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "クラウドサービスなどによって，チームリーダとして，チームメンバの作業工程と活動状況を電子的に管理できる．",
+            "qnumber": 8,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "eポートフォリオを使って，自身の活動を電子的に記録し続けている．",
+            "qnumber": 9,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "eポートフォリオを使って，自身の活動を評価したり振り返ったりしている．",
+            "qnumber": 10,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "eポートフォリオを使って，自身の活動を整理して他者へ公開できる．",
+            "qnumber": 11,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "スマートフォンでの送金やタッチ決済など，電子決済を日常的に使用している．",
+            "qnumber": 12,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "チャットシステムを使って，テキストによる対話をおこなえる．",
+            "qnumber": 13,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "電子メールを送受信できる．",
+            "qnumber": 14,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "HTMLを使って簡易なWebページを作成できる．",
+            "qnumber": 15,
+            "radio_check": "None"
+        }
+    ]
+}

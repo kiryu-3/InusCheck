@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>情報活用力チェック</title>
+        <link rel="stylesheet"  type="text/css" href="result/css/hamburger.css">
+        <link rel="stylesheet"  type="text/css" href="result/css/department.css">
+        <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+        <style>
+            body {
+                background-color: #f8f9fa;
+            }
+
+            .container {
+                margin-top: 50px;
+            }
+
+            h2 {
+                color: #007bff;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            form {
+                margin-bottom: 20px;
+            }
+
+            button {
+                margin-top: 20px;
+            }
+        </style>
+
+    </head>
+<body>
+    <header class="c-header c-hamburger-menu">
+        <a href="{{ url_for('top') }}" class="c-header__logo">情報活用力チェック</a>
+        <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/>
+        <label for="hamburger" class="c-hamburger-menu__bg"></label>
+        <ul class="c-header__list c-hamburger-menu__list">
+            <li class="c-header__list-item">
+                <a href="{{ url_for('top') }}" class="c-header__list-link">TOP</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="{{ url_for('dashboard') }}" class="c-header__list-link">チェックスタート</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="{{ url_for('selectUniversity') }}" class="c-header__list-link">チェック履歴</a>
+            </li>
+        </ul>
+        <label for="hamburger" class="c-hamburger-menu__button">
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+        </label>
+    </header>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h2 class="text-center">情報学士力チェック</h2>
+            <div class="bordertitle">
+                <p>ログイン中のメールアドレス: {{ email }}</p>
+            </div>
+
+                <form action="/selectUniversity" method="post">
+                    <div class="form-group">
+                        <label for="university">大学名:</label>
+                        <select class="form-control" id="university" name="university" onchange="checkButtonState()">
+                            <option value="" selected>選択してください</option>
+                        </select>
+                        <br>
+
+                    </div>
+                    <p>指定した大学の情報活用力チェック結果を参照できます．</p>
+                    <p>以前にチェックを行っている場合は、そのときの結果も参照できます．</p>
+                    <button type="question1" class="btn btn-primary" id='startButton' disabled>履歴閲覧</button>
+                </form>
+                <button onclick="location.href='/logout'" class="btn btn-link">ログアウト</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var universityData = {{ universities | tojson }};
+    console.log(universityData);
+    var isButtonEnabled = false;
+
+    var universityDropdown = document.getElementById("university");
+    // 大学名のドロップダウンを設定
+    for (var university in universityData) {
+        var option = document.createElement("option");
+        console.log(universityDropdown);
+        option.value = university;
+        option.text = university;
+        universityDropdown.add(option);
+    }
+
+    function checkButtonState() {
+        // ボタンが有効で、かつ全てのセレクトボックスが選択された場合にボタンを有効にする
+        var university = document.getElementById('university').value;
+
+        if (university !== '') {
+            document.getElementById('startButton').disabled = false;
+        }
+    }
+</script>
+
+
+
+</body>
+</html>

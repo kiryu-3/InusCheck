@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情報活用力チェック</title>
+    <link rel="stylesheet"  type="text/css" href="../result/css/hamburger.css">
+
+    <style>
+
+        .thank-you-message {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            font-size: 3em;
+            color: #009688; /* テキストの色を指定 */
+        }
+    </style>
+</head>
+<body>
+    <header class="c-header c-hamburger-menu">
+        <a href="{{ url_for('top') }}" class="c-header__logo">情報活用力チェック</a>
+        <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/>
+        <label for="hamburger" class="c-hamburger-menu__bg"></label>
+        <ul class="c-header__list c-hamburger-menu__list">
+            <li class="c-header__list-item">
+                <a href="{{ url_for('top') }}" class="c-header__list-link">TOP</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="{{ url_for('dashboard') }}" class="c-header__list-link">チェックスタート</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="{{ url_for('selectUniversity') }}" class="c-header__list-link">チェック履歴</a>
+            </li>
+        </ul>
+        <label for="hamburger" class="c-hamburger-menu__button">
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+        </label>
+    </header>
+    <div class="thank-you-message">
+        調査のご協力ありがとうございました！！
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>情報活用力チェック</title>
+    <link rel="stylesheet"  type="text/css" href="result/css/hamburger.css">
+    <link rel="stylesheet"  type="text/css"  href="result/css/question.css">
+    <script>console.log({{ all_dict | tojson }})</script>
+    <script  type="text/javascript" src="result/js/Myjs/question.js"></script>
+    <style>
+            body {
+                background-color: #f8f9fa;
+            }
+
+
+            h2 {
+                color: #007bff;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            form {
+                margin-bottom: 20px;
+            }
+
+            button {
+                margin-top: 20px;
+            }
+        </style>
+</head>
+<body>
+    <header class="c-header c-hamburger-menu">
+        <a href="{{ url_for('top') }}" class="c-header__logo">情報活用力チェック</a>
+        <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/>
+        <label for="hamburger" class="c-hamburger-menu__bg"></label>
+        <ul class="c-header__list c-hamburger-menu__list">
+            <li class="c-header__list-item">
+                <a href="{{ url_for('top') }}" class="c-header__list-link">TOP</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="{{ url_for('dashboard') }}" class="c-header__list-link">チェックスタート</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="{{ url_for('selectUniversity') }}" class="c-header__list-link">チェック履歴</a>
+            </li>
+        </ul>
+        <label for="hamburger" class="c-hamburger-menu__button">
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+        </label>
+    </header>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <h2 class="text-center">{{all_dict.category}}</h2>
+                <div class="bordertitle">
+                    <p>メールアドレス: {{all_dict.email}}</p>
+                    <p>大学名: {{all_dict.university}}</p>
+                    <p>学年: {{all_dict.grade}}</p>
+                    <p>学科: {{all_dict.department}}</p>
+                </div>
+                <form action="{% if all_dict.cnumber == 4 %}/check{% else %}/question{{ all_dict.cnumber+1 }}{% endif %}" method="post">
+                    <div class="form-group">
+                        {% for item in all_dict.question %}
+                            <label for="skill{{item.qnumber}}">Q{{ item.qnumber }}. {{item.sentence}}</label>
+                            <br>
+                            <div class="question">
+                                <input type="radio" id="yes{{item.qnumber}}" name="skill{{item.qnumber}}" value="yes" {% if item.radio_check == 'yes' %}checked{% endif %}  onchange="checkRadioSelected()">
+                                <label for="yes{{item.qnumber}}" class="label">〇</label>
+                                <input type="radio" id="no{{item.qnumber}}" name="skill{{item.qnumber}}" value="no" {% if item.radio_check == 'no' %}checked{% endif %}  onchange="checkRadioSelected()">
+                                <label for="no{{item.qnumber}}" class="label">✕</label>
+                                <input type="radio" id="unknown{{item.qnumber}}" name="skill{{item.qnumber}}" value="unknown" {% if item.radio_check == 'unknown' %}checked{% endif %}  onchange="checkRadioSelected()">
+                                <label for="unknown{{item.qnumber}}" class="label">?</label>
+                                <br>
+                                <div class="border"></div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                    <div class="transition">
+                        <button type="button" onclick="location.href='{{all_dict.nextpage}}'" class="btn btn-link">前に戻る</button>
+                        <input type="submit" id="submit" value="{% if all_dict.cnumber == 4 %}確認画面へ{% else %}次へ{% endif %}" disabled>
+                    </div>
+                </form>
+                <p class="page">{{all_dict.cnumber}} / 4 </p>
+                <button onclick="location.href='/logout'" class="btn btn-link">ログアウト</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

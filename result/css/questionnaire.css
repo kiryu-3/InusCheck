@@ -1,0 +1,159 @@
+.bordertitle-line{
+    border-bottom: 2px solid blue;
+    opacity: 0.1;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.bordertitle {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: black;/*文字色*/
+    background: #FFF;
+    border: solid 3px black;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.bordertitle p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-top: 10px;
+}
+
+.question {
+    margin-left: 40px;
+    margin-bottom: 15px
+}
+
+.sentence {
+    margin-bottom: 10px;
+}
+
+.transition {
+    text-align: center;
+}
+
+
+
+.border-line{
+    border-bottom: 2px solid blue;
+    opacity: 0.1;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.border {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: black;/*文字色*/
+    background: #FFF;
+    border: solid 3px black;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.borderquestion {
+    border-bottom:2px solid blue;
+    opacity: 0.1;
+    margin-top: 10px;
+}
+
+
+.border p {
+    margin: 0;
+    padding: 0;
+}
+
+.conditions{
+    text-align: center;
+}
+
+.transition{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+
+    @import "src/assets/css/bootstrap";
+
+}
+
+.btn{
+    margin-right: 30px;
+}
+
+#category{
+    font-size: large;
+}
+
+select{
+    font-size: large;
+}
+
+label[for="category"]{
+    font-size: large;
+    font-weight: bolder;
+}
+
+
+/* メニューのデザイン*/
+.nav_content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%; /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: #fff;
+    transition: .5s;
+}
+
+  /* メニュー黒ポチを消す */
+.nav_list {
+    list-style: none;
+}
+
+  /* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+    left: 0;/* メニューを画面に入れる */
+}
+
+/* ラジオボタンのレイアウト */
+
+input[type=radio] {
+    display: none; /* ラジオボタンを非表示にする */
+}
+.label {
+    display: inline-block; /* ブロックレベル要素化する */
+    /*float: left;  要素の左寄せ・回り込を指定する */
+    margin: 5px; /* ボックス外側の余白を指定する */
+    /*width: 100px;  ボックスの横幅を指定する */
+    height: 30px; /* ボックスの高さを指定する */
+    padding: 5px 10px;
+    color: black; /* フォントの色を指定 */
+    text-align: center; /* テキストのセンタリングを指定する */
+    line-height: 20px; /* 行の高さを指定する */
+    cursor: pointer; /* マウスカーソルの形（リンクカーソル）を指定する */
+    border: 2px solid #006DD9;/* ボックスの境界線を実線で指定する */
+    border-radius: 5px; /* 角丸を指定する */
+    box-sizing: border-box;
+}
+
+input[type="radio"]:checked + label {
+    background: #31A9EE;/* マウス選択時の背景色を指定する */
+    color: #ffffff; /* マウス選択時のフォント色を指定する */
+}
+
+.question7 textarea {
+    width: 90%;
+    height: 200px; /* 適切な高さに調整 */
+    margin: 0 10px; /* 左右に10pxずつ余白を追加 */
+}
+

@@ -1,0 +1,107 @@
+.bordertitle-line{
+    border-bottom: 2px solid blue;
+    opacity: 0.1;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.bordertitle {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: black;/*文字色*/
+    background: #FFF;
+    border: solid 3px black;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.bordertitle p {
+    margin: 0;
+    padding: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.col-4 p {
+    text-align: center;
+}
+
+.form-group {
+    text-align: center;
+}
+
+.form-control {
+    text-align: center;
+}
+
+.btn-primary {
+    float: right;
+    margin-bottom: 30px
+}
+
+
+
+.border-line{
+    border-bottom: 2px solid blue;
+    opacity: 0.1;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.border {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: black;/*文字色*/
+    background: #FFF;
+    border: solid 3px black;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.borderquestion {
+    border-bottom:2px solid blue;
+    opacity: 0.1;
+    margin-top: 10px;
+}
+
+
+.border p {
+    margin: 0;
+    padding: 0;
+}
+
+.conditions{
+    text-align: center;
+}
+
+.transition{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+
+    @import "src/assets/css/bootstrap";
+
+}
+
+.btn{
+    margin-right: 30px;
+}
+
+#category{
+    font-size: large;
+}
+
+select{
+    font-size: large;
+}
+
+label[for="category"]{
+    font-size: large;
+    font-weight: bolder;
+}

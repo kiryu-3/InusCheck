@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>情報活用力チェック</title>
+    <link rel="stylesheet"  type="text/css" href="result/css/hamburger.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script>
+        function validateForm() {
+            var pwd = document.getElementById('pwd').value;
+            var confirm_pwd = document.getElementById('confirm_pwd').value;
+            if (pwd != confirm_pwd) {
+                alert('パスワードとパスワード確認が一致しません。');
+                return false;
+            }
+            return true;
+        }
+        // JavaScriptでフォームのaction属性を設定
+        document.getElementById("loginForm").addEventListener("submit", function() {
+            // ここでnextの値を取得し、動的にaction属性を設定
+            var nextValue = "動的に取得した値";  // 例: ページ内で取得したり、サーバーから取得したり
+            this.action = "/register?next=" + encodeURIComponent(nextValue);
+        });
+
+        function redirectToRegister() {
+            var nextParam = getQueryStringParameter('next');
+            var redirectUrl = '/login';
+            if (nextParam) {
+                redirectUrl += '?next=' + encodeURIComponent(nextParam);
+            }
+            window.location.href = redirectUrl;
+        }
+
+        function getQueryStringParameter(name) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+    </script>
+    <style>
+        body {
+                background-color: #f8f9fa;
+            }
+
+        .container {
+            margin-top: 50px;
+        }
+        p {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="c-header c-hamburger-menu">
+        <a href="{{ url_for('top') }}" class="c-header__logo">情報活用力チェック</a>
+        <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/>
+        <label for="hamburger" class="c-hamburger-menu__bg"></label>
+        <ul class="c-header__list c-hamburger-menu__list">
+            <li class="c-header__list-item">
+                <a href="{{ url_for('top') }}" class="c-header__list-link">TOP</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="{{ url_for('dashboard') }}" class="c-header__list-link">チェックスタート</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="{{ url_for('selectUniversity') }}" class="c-header__list-link">チェック履歴</a>
+            </li>
+        </ul>
+        <label for="hamburger" class="c-hamburger-menu__button">
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+        </label>
+    </header>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <h2 class="text-center">新規登録</h2>
+                <form id="loginForm" action="/register" method="post" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <label for="email">メールアドレス:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">パスワード:</label>
+                        <input type="password" class="form-control" id="pwd" name="pwd" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm_pwd">パスワード確認:</label>
+                        <input type="password" class="form-control" id="confirm_pwd" name="confirm_pwd" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">登録</button>
+                </form>
+                </form>
+                <button onclick="redirectToRegister()" class="btn btn-link btn-block">ログイン</button>
+                <p>メールアドレスは、個人を特定するための識別情報として使用します。<br>
+                    他の利用者とメールアドレスが被ると正確な識別が難しくなりますので、<br>
+                    大学のメールアドレスを入力していただくようご協力お願い申し上げます。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

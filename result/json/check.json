@@ -1,0 +1,373 @@
+{
+    "email": "segkao.galaxy@gmail.com",
+    "university": "公立千歳科学技術大学",
+    "grade": "B3",
+    "department": "情報システム工学科",
+    "universities": {
+        "公立千歳科学技術大学": {
+            "B1": [
+                "共通教育科"
+            ],
+            "B2": [
+                "共通教育科",
+                "応用化学生物学科",
+                "電子光工学科",
+                "情報システム工学科"
+            ],
+            "B3": [
+                "応用化学生物学科",
+                "電子光工学科",
+                "情報システム工学科"
+            ],
+            "B4": [
+                "応用化学生物学科",
+                "電子光工学科",
+                "情報システム工学科"
+            ],
+            "M1": [
+                "理工学研究科"
+            ],
+            "M2": [
+                "理工学研究科"
+            ]
+        }
+    },
+    "categories": [
+        "オンライン・コラボレーション力",
+        "データ利活用力",
+        "情報システム開発力",
+        "情報倫理力"
+    ],
+    "question": [
+        {
+            "qnumber": 1,
+            "sentence": "ビデオ会議や共有ホワイトボードなどによって，複数人でオンラインでのディスカッションをおこなえる．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 2,
+            "sentence": "クラウドサービスなどによって，複数人でオンラインでの共同文書作成をおこなえる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 3,
+            "sentence": "クラウドサービスなどによって，複数人でオンラインでの共同表計算データ処理をおこなえる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 4,
+            "sentence": "クラウドサービスなどによって，複数人でオンラインでのプレゼンテーション資料（スライド）の作成をおこなえる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 5,
+            "sentence": "メタバースにおいて，複数人での共同作業をおこなえる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 6,
+            "sentence": "自身の作業工程や活動状況をクラウドサービスなどによって，電子的に管理できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 7,
+            "sentence": "クラウドサービスなどによって，自身と他者の作業工程や活動状況を電子的に情報共有できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 8,
+            "sentence": "クラウドサービスなどによって，チームリーダとして，チームメンバの作業工程と活動状況を電子的に管理できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 9,
+            "sentence": "eポートフォリオを使って，自身の活動を電子的に記録し続けている．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 10,
+            "sentence": "eポートフォリオを使って，自身の活動を評価したり振り返ったりしている．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 11,
+            "sentence": "eポートフォリオを使って，自身の活動を整理して他者へ公開できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 12,
+            "sentence": "スマートフォンでの送金やタッチ決済など，電子決済を日常的に使用している．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 13,
+            "sentence": "チャットシステムを使って，テキストによる対話をおこなえる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 14,
+            "sentence": "電子メールを送受信できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 15,
+            "sentence": "HTMLを使って簡易なWebページを作成できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 16,
+            "sentence": "機械判読可能なデータの表記を意識して統計表を作成できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 17,
+            "sentence": "グラフの特徴や統計データの種類や分析の目的を踏まえて，グラフを使い分けている．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 18,
+            "sentence": "名義尺度，順序尺度，感覚尺度，比例尺度の違いを説明できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 19,
+            "sentence": "ソフトウェアを使って，基本統計量を算出できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 20,
+            "sentence": "ソフトウェアを使って，単回帰式を導出できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 21,
+            "sentence": "ソフトウェアを使って，t検定を実施できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 22,
+            "sentence": "ソフトウェアを使って，一元配置分散分析を実施できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 23,
+            "sentence": "ソフトウェアを使って，ノンパラメトリック検定を実施できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 24,
+            "sentence": "ソフトウェアを使って，因子分析を実施できる．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 25,
+            "sentence": "ソフトウェアを使って，クラスター分析を実施できる．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 26,
+            "sentence": "プログラミングによって，基本統計量を算出できる．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 27,
+            "sentence": "プログラミングによって，散布図やヒストグラムや箱ひげ図などによるデータの視覚化をおこなえる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 28,
+            "sentence": "プログラミングによって，単回帰式を導出できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 29,
+            "sentence": "プログラミングによって，t検定を実施できる．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 30,
+            "sentence": "プログラミングによって，一元配置分散分析を実施できる．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 31,
+            "sentence": "情報システムの開発工程において，「要求定義→設計→実装→テスト」の一連のプロセスを実践または体験したことがある．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 32,
+            "sentence": "1種類以上のプログラミング言語で，簡易な順次構造・反復構造・分岐構造のコードを記述できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 33,
+            "sentence": "1種類以上のプログラミング言語で，線形探索または二分探索のコードを記述できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 34,
+            "sentence": "1種類以上のプログラミング言語で，単純交換ソート，単純挿入ソート，単純選択ソートのいずれかのコードを記述できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 35,
+            "sentence": "オブジェクト指向プログラミングの考え方および基本的な用語（カプセル化，クラス，インスタンスなど）を説明できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 36,
+            "sentence": "Microsoft Windows MLやApple CoreMLなどの，機械学習における学習済みの学習器を利用して，アプリケーションを作成したことがある．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 37,
+            "sentence": "ニューラルネットワークを構築したことがある．または，学習のためのデータセットを作成したことがある．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 38,
+            "sentence": "自分のパソコンなどをインターネットへつなぐために，ルータのWAN側とLAN側の設定をおこなったことがある．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 39,
+            "sentence": "ルータのファイアウォールの設定をおこなったことがある．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 40,
+            "sentence": "サーバのネットワークの設定をおこなったことがある．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 41,
+            "sentence": "サーバのファイアウォールの設定をおこなったことがある．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 42,
+            "sentence": "サーバのhttpサービスの設定をおこなったことがある．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 43,
+            "sentence": "ユーザビリティにおける効果・効率・満足度について説明できる．",
+            "radio_check": "unknown"
+        },
+        {
+            "qnumber": 44,
+            "sentence": "情報デザインとして，場所・辞書順・時間・カテゴリ・階層などに注意した情報の整理を心がけている．",
+            "radio_check": "unknown"
+        },
+        {
+            "qnumber": 45,
+            "sentence": "自身が所有する端末にマルウェア対策を施している．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 46,
+            "sentence": "日頃から，パスワードの扱いに留意している．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 47,
+            "sentence": "著作権法の「著作物」とは何か説明できる．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 48,
+            "sentence": "著作権法の「著作権」について説明できる．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 49,
+            "sentence": "著作権法の「著作者人格権」について説明できる．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 50,
+            "sentence": "知的財産権について説明できる．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 51,
+            "sentence": "個人情報保護法について説明でき，日頃から個人情報の取扱いに留意している．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 52,
+            "sentence": "不正アクセス禁止法について説明できる．",
+            "radio_check": "no"
+        },
+        {
+            "qnumber": 53,
+            "sentence": "発信者のモラルとして，日頃から，誹謗・中傷・公序良俗に反する投稿をしないことに留意している．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 54,
+            "sentence": "発信者のモラルとして，日頃から，投稿前に内容を再確認することを心がけている．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 55,
+            "sentence": "発信者のモラルとして，日頃から，安易な拡散をしないことに留意している．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 56,
+            "sentence": "情報は受信者の趣味嗜好に合わせてカスタマイズされている可能性があることを知っている．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 57,
+            "sentence": "情報の受信時に，見たい情報以外がはじかれるフィルターバブルが起きる可能性があることを知っている．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 58,
+            "sentence": "情報受信時に，似たような意見や考えが増幅されるエコーチェンバーが生じる可能性があることを知っている．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 59,
+            "sentence": "オンライン売買において，サイト運営企業とその中の個々の店舗とでは信用性に違いがある場合があることを知っている．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 60,
+            "sentence": "クレジットカード利用には，利用者としての責任が生じることを知っている．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 61,
+            "sentence": "オンライン売買をおこなう前に，商品の説明や過去の取引評価などを確認することを心がけている．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 62,
+            "sentence": "オンライン売買のあと，販売側からの直接的な接触が生じる可能性があることを知っている．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 63,
+            "sentence": "日頃から，個人のプライバシーに関して，どこまでオープンとするかに留意している．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 64,
+            "sentence": "意図しない情報漏洩が起こらないように，アプリやサービスをインストールしたり設定したりすることを心がけている．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 65,
+            "sentence": "情報機器の利用によって自宅や行動範囲が他者に伝わってしまう可能性があることを知っている．",
+            "radio_check": "yes"
+        },
+        {
+            "qnumber": 66,
+            "sentence": "日頃から，ニュースや新聞などでICTに関する情報に関心をもつよう心がけている．",
+            "radio_check": "yes"
+        }
+    ]
+}

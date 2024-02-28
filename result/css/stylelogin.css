@@ -1,0 +1,17 @@
+.conteiner {
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.form-group {
+    text-align: center;
+}
+
+.btn, btn-primary {
+    float: right;
+    margin-right: 50px;
+}

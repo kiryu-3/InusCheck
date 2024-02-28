@@ -1,0 +1,2 @@
+<class 'UnboundLocalError'>,local variable 'df' referenced before assignment,<traceback object at 0x000001981541AB40>
+1,1,0

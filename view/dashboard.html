@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>情報活用力チェック</title>
+        <link rel="stylesheet"  type="text/css" href="../result/css/hamburger.css">
+        <link rel="stylesheet"  type="text/css" href="../result/css/department.css">
+        <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+        <style>
+            body {
+                background-color: #f8f9fa;
+            }
+
+            .container {
+                margin-top: 50px;
+            }
+
+            h2 {
+                color: #007bff;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            form {
+                margin-bottom: 20px;
+            }
+
+            button {
+                margin-top: 20px;
+            }
+        </style>
+
+    </head>
+<body>
+    <header class="c-header c-hamburger-menu">
+        <a href="{{ url_for('top') }}" class="c-header__logo">情報活用力チェック</a>
+        <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/>
+        <label for="hamburger" class="c-hamburger-menu__bg"></label>
+        <ul class="c-header__list c-hamburger-menu__list">
+            <li class="c-header__list-item">
+                <a href="{{ url_for('top') }}" class="c-header__list-link">TOP</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="{{ url_for('dashboard') }}" class="c-header__list-link">チェックスタート</a>
+            </li>
+            <li class="c-header__list-item">
+                <a href="{{ url_for('selectUniversity') }}" class="c-header__list-link">チェック履歴</a>
+            </li>
+        </ul>
+        <label for="hamburger" class="c-hamburger-menu__button">
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+            <span class="c-hamburger-menu__button-mark"></span>
+        </label>
+    </header>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h2 class="text-center">情報学士力チェック</h2>
+            <div class="bordertitle">
+                <p>ログイン中のメールアドレス: {{ email }}</p>
+            </div>
+
+                <form action="/question1" method="post">
+                    <div class="form-group">
+                        <label for="university">大学名:</label>
+                        <select class="form-control" id="university" name="university" onchange="updateDepartments()">
+                            <option value="" selected>選択してください</option>
+                        </select>
+                        <br>
+                        <label for="grade">学年:</label>
+                        <select class="form-control" id="grade" name="grade" onchange="updateCourses()">
+                            <option value="" selected>選択してください</option>
+                        </select>
+                        <br>
+                        <label for="course">所属:</label>
+                        <select class="form-control" id="course" name="department">
+                            <option value="" selected>選択してください</option>
+                        </select>
+                        <br>
+                    </div>
+                    <p>調査へのご協力，ありがとうございます．</p>
+                    <p>この情報活用力チェックの目的は，学生自身が現時点での自身の情報通信技術に関する知識やスキルの特徴を把握することです．<br>試験やテストのような，満点を目指したり他者との優劣を決めたりすることが目的ではありません．</p>
+                    <p>各項目文は，学生自身の所属や分野や興味にあわせて自身で解釈を変えられるよう，あえて抽象的に書かれています．<br>たとえば，「○○できる．」という項目文への「はい・いいえ」の回答について，<br>初歩的な知識やスキルを満たしていることで「はい」と回答する方もいれば，高い知識やスキルを満たせていないことで「いいえ」と回答する方もいます．<br>項目文への解釈とその対象範囲およびその回答の判断については，ご自身で想定して結構です．</p>
+                    <p>回答時間の目安は，10分間から15分間ほどです．<br>もちろん，じっくりと検討したうえでこれ以上の時間がかかってもかまいません．</p>
+                    <p>回答方法として，各項目文につづく選択肢の内のどれかひとつを必ず選択してください．</p>
+                    <p>項目の構成は以下の通りです．</p>
+                    <ul>
+                    <li>オンラインコラボレーション力（15項目）</li>
+                    <li>データ利活用力（15項目）</li>
+                    <li>情報システム開発力（14項目）</li>
+                    <li>情報倫理力（22項目）</li>
+                    </ul>
+                    <p>収集したデータおよび個人情報の取り扱いについて，本学の研究倫理規則に則り，厳守します．<br>回答データは，情報活用学士力に関する調査・研究のために使用するもので，外部に個人情報が漏れることはありません．<br>研究発表の際にも，統計処理や統計分析の結果を示すこととし，個人が特定されるようなことはありません．</p>
+                    <p>注意事項:</p>
+                        <ul>
+                            <li>選択した情報は正確に入力してください。</li>
+                            <li>不正確な情報は後のプロセスに影響を与える可能性があります。</li>
+                            <!-- 他の注意事項を追加する場合は、ここに<li>タグを追加 -->
+                        </ul>
+                    <button type="question1" class="btn btn-primary" id='startButton' disabled>スタート</button>
+                </form>
+                <button onclick="location.href='/logout'" class="btn btn-link">ログアウト</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var universityData = {{ universities | tojson }};
+    console.log(universityData);
+    var isButtonEnabled = false;
+</script>
+<script  type="text/javascript" src="../result/js/Myjs/department.js"></script>
+
+</body>
+</html>

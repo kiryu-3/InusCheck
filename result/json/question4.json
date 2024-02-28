@@ -1,0 +1,121 @@
+{
+    "email": "yukiya36@yahoo.co.jp",
+    "university": "公立千歳科学技術大学",
+    "grade": "B4",
+    "department": "情報システム工学科",
+    "cnumber": 4,
+    "category": "情報倫理力",
+    "nextpage": "/question3",
+    "question": [
+        {
+            "sentence": "自身が所有する端末にマルウェア対策を施している．",
+            "qnumber": 45,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "日頃から，パスワードの扱いに留意している．",
+            "qnumber": 46,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "著作権法の「著作物」とは何か説明できる．",
+            "qnumber": 47,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "著作権法の「著作権」について説明できる．",
+            "qnumber": 48,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "著作権法の「著作者人格権」について説明できる．",
+            "qnumber": 49,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "知的財産権について説明できる．",
+            "qnumber": 50,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "個人情報保護法について説明でき，日頃から個人情報の取扱いに留意している．",
+            "qnumber": 51,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "不正アクセス禁止法について説明できる．",
+            "qnumber": 52,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "発信者のモラルとして，日頃から，誹謗・中傷・公序良俗に反する投稿をしないことに留意している．",
+            "qnumber": 53,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "発信者のモラルとして，日頃から，投稿前に内容を再確認することを心がけている．",
+            "qnumber": 54,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "発信者のモラルとして，日頃から，安易な拡散をしないことに留意している．",
+            "qnumber": 55,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "情報は受信者の趣味嗜好に合わせてカスタマイズされている可能性があることを知っている．",
+            "qnumber": 56,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "情報の受信時に，見たい情報以外がはじかれるフィルターバブルが起きる可能性があることを知っている．",
+            "qnumber": 57,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "情報受信時に，似たような意見や考えが増幅されるエコーチェンバーが生じる可能性があることを知っている．",
+            "qnumber": 58,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "オンライン売買において，サイト運営企業とその中の個々の店舗とでは信用性に違いがある場合があることを知っている．",
+            "qnumber": 59,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "クレジットカード利用には，利用者としての責任が生じることを知っている．",
+            "qnumber": 60,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "オンライン売買をおこなう前に，商品の説明や過去の取引評価などを確認することを心がけている．",
+            "qnumber": 61,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "オンライン売買のあと，販売側からの直接的な接触が生じる可能性があることを知っている．",
+            "qnumber": 62,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "日頃から，個人のプライバシーに関して，どこまでオープンとするかに留意している．",
+            "qnumber": 63,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "意図しない情報漏洩が起こらないように，アプリやサービスをインストールしたり設定したりすることを心がけている．",
+            "qnumber": 64,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "情報機器の利用によって自宅や行動範囲が他者に伝わってしまう可能性があることを知っている．",
+            "qnumber": 65,
+            "radio_check": "None"
+        },
+        {
+            "sentence": "日頃から，ニュースや新聞などでICTに関する情報に関心をもつよう心がけている．",
+            "qnumber": 66,
+            "radio_check": "None"
+        }
+    ]
+}

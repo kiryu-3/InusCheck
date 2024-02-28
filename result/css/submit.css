@@ -1,0 +1,106 @@
+footer {
+            height: 50px; /* フッターの高さに合わせて適切な値を指定 */
+        }
+
+.bordertitle-line{
+    border-bottom: 2px solid blue;
+    opacity: 0.1;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.bordertitle {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: black;/*文字色*/
+    background: #FFF;
+    border: solid 3px black;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.bordertitle p {
+    margin: 0;
+    padding: 0;
+}
+
+.form-group {
+    letter-spacing: 1px;
+}
+
+.container {
+    padding-top: 10px;
+}
+
+.question {
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+
+.transition {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.borderline {
+    border-bottom: 2px solid red;
+}
+
+.border {
+    border-bottom:2px solid blue;
+    margin-top: 10px;
+    opacity: 0.1;
+    padding-top: 100px;
+}
+
+.conditions {
+    background-color: rgba(0, 255, 255, 0.3);
+}
+
+.btn {
+    margin-right: 30px;
+    width: 100px;
+    height: 40px;
+}
+
+.btn2 {
+    text-align: center;
+}
+
+.multiselect {
+    text-align: center;
+    vertical-align: middle;
+    margin: 0%;
+}
+
+.radarChart {
+    text-align: center;
+
+}
+
+
+/* ラジオボタンのレイアウト */
+
+input[type=radio] {
+    display: none; /* ラジオボタンを非表示にする */
+}
+.label {
+    display: block; /* ブロックレベル要素化する */
+    float: left; /* 要素の左寄せ・回り込を指定する */
+    margin: 5px; /* ボックス外側の余白を指定する */
+    width: 50px; /* ボックスの横幅を指定する */
+    height: 20px; /* ボックスの高さを指定する */
+    padding-left: 5px; /* ボックス内左側の余白を指定する */
+    padding-right: 5px; /* ボックス内御右側の余白を指定する */
+    color: black; /* フォントの色を指定 */
+    text-align: center; /* テキストのセンタリングを指定する */
+    line-height: 20px; /* 行の高さを指定する */
+    cursor: pointer; /* マウスカーソルの形（リンクカーソル）を指定する */
+    border: 2px solid #006DD9;/* ボックスの境界線を実線で指定する */
+    border-radius: 5px; /* 角丸を指定する */
+}
+
+input[type="radio"]:checked + label {
+    background: #31A9EE;/* マウス選択時の背景色を指定する */
+    color: #ffffff; /* マウス選択時のフォント色を指定する */
+}
